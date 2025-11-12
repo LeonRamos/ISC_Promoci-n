@@ -1,4 +1,148 @@
-# Tecnologías — Badges (Carrera de Sistemas Computacionales)
+***
+
+# Bienvenidos al repositorio del área de Sistemas Computacionales del Tecnológico Superior de Jalisco Zapopan.
+
+Este espacio fue creado como parte de una actividad práctica que te permitirá conocer de forma sencilla y divertida lo que representa estudiar la carrera de Ingeniería en Sistemas Computacionales. Aquí podrás explorar proyectos, código y ejemplos reales que muestran cómo la tecnología puede resolver problemas, conectar ideas y transformar el mundo.
+
+Si te apasiona la computación, la creatividad y el trabajo en equipo, estás en el lugar indicado. Aprovecha esta experiencia para descubrir todo lo que puedes lograr al estudiar Sistemas Computacionales y prepárate para construir tu futuro profesional con entusiasmo y dedicación.
+
+¡Atrévete a aprender, experimentar y soñar en grande!
+
+***
+
+# Actividad
+
+## Test Vocacional
+abre tu inteligencia rtificial de tu preferencia e inicia sesion con tus credenciales (chatgpt cloude  gemini )
+copia el siguinte promt:
+Quiero que actúes como un orientador vocacional especializado en el área de Tecnologías de la Información (TI). Tu tarea es crear un juego tipo test vocacional dirigido a estudiantes de nivel medio superior o universitario que estén explorando opciones de carrera dentro del ámbito de los sistemas computacionales, informática o áreas afines.
+
+Instrucciones para el test:
+
+- El juego debe ser interactivo y estar dividido en secciones con preguntas tipo "elige una opción".
+- Cada pregunta debe permitir medir el interés, las habilidades y las aptitudes del estudiante en distintas ramas de TI, como:
+    - Programación y desarrollo de software
+    - Redes y telecomunicaciones
+    - Ciberseguridad y auditoría informática
+    - Ciencia de datos y análisis
+    - Inteligencia artificial y automatización
+    - Soporte técnico y administración de sistemas
+    - Diseño y experiencia de usuario (UI/UX)
+- Al finalizar, el juego debe presentar un resultado personalizado que indique cuál de estas áreas puede ser la más adecuada según sus respuestas.
+- Si el resultado no coincide con ningún perfil claramente relacionado con TI, el juego debe mostrar un mensaje amable invitando al alumno a realizar otro test vocacional en línea para descubrir otras áreas o ciencias que podría explorar.
+
+Objetivo:
+Crear una experiencia educativa lúdica, motivadora y útil que ayude al estudiante a reflexionar sobre su afinidad con carreras del área de Tecnologías de la Información.
+
+,
+deja que porcese la informacion,
+escribe: empezar a jugar, contestar cada una de las preguntas que este te presente
+analiza tus resultados y veras una propuesta de orientacion vocacional en el area de Tecnologias de informacion, si ti resultados son muy bajos para el area de TI busca hacer otros examens de orientacion vocacional que abarque otra diciplianas o ciecias
+
+Aquí tienes tus instrucciones corregidas, con redacción clara, ortografía precisa y tono adecuado para estudiantes de bachillerato:
+
+***
+
+**Instrucciones de la actividad**
+
+1. Abre la herramienta de inteligencia artificial de tu preferencia (por ejemplo, ChatGPT, Claude o Gemini) e inicia sesión con tus credenciales.
+2. Copia y pega el siguiente prompt:
+
+**Prompt para la actividad:**
+
+```markdown
+Instrucciones para el test:
+    - El juego debe ser interactivo y estar dividido en secciones con preguntas tipo "elige una opción".
+    - Cada pregunta debe permitir medir el interés, las habilidades y las aptitudes del estudiante en distintas ramas de TI, como:
+        - Programación y desarrollo de software
+        - Redes y telecomunicaciones
+        - Ciberseguridad y auditoría informática
+        - Ciencia de datos y análisis
+        - Inteligencia artificial y automatización
+        - Soporte técnico y administración de sistemas
+        - Diseño y experiencia de usuario (UI/UX)
+    - Al finalizar, el juego debe presentar un resultado personalizado que indique cuál de estas áreas puede ser la más adecuada según sus respuestas.
+    - Si el resultado no coincide con ningún perfil claramente relacionado con TI, el juego debe mostrar un mensaje amable invitando al alumno a realizar otro test vocacional en línea para descubrir otras áreas o ciencias que podría explorar.
+
+Objetivo:
+Crear una experiencia educativa lúdica, motivadora y útil que ayude al estudiante a reflexionar sobre su afinidad con carreras del área de Tecnologías de la Información.
+```
+
+3. Espera a que la inteligencia artificial procese la información.
+4. Escribe empezar a jugar para iniciar la actividad y responde cada una de las preguntas que te presente.
+5. Al finalizar, analiza tus resultados. Verás una propuesta de orientación vocacional dentro del área de Tecnologías de la Información.
+6. Si tus resultados muestran un bajo nivel de afinidad con esta área, te sugerimos realizar otros tests vocacionales que abarquen distintas disciplinas o campos del conocimiento.
+
+## Vamos a codificar (Citizen Developer's)
+### Importancia del Desarrollo Web para la Transformación de Negocios
+
+
+
+#### ¿Por qué es importante el desarrollo web en los negocios?
+- **Automatización de procesos:** Permite digitalizar tareas que antes se realizaban manualmente, incrementando la eficiencia.
+- **Mejora de la experiencia del cliente:** Plataformas web bien diseñadas favorecen la interacción y fidelización.
+- **Expansión y competitividad:** Amplía el alcance del negocio a nivel global, mejorando el posicionamiento en el mercado.
+- **Acceso a datos y análisis:** Facilita la recolección y uso inteligente de la información para decisiones estratégicas.
+
+#### Tecnologías clave
+- **HTML:** Lenguaje de marcado que estructura contenido en la web.
+- **CSS:** Define estilos visuales para mejorar la experiencia y accesibilidad.
+- **JavaScript:** Permite interactividad y dinamismo en las páginas web.
+
+#### ¿Quién regula la Web?
+- El desarrollo web se basa en estándares abiertos promovidos por el **World Wide Web Consortium (W3C)**.
+- Visita el sitio oficial: [https://www.w3.org/](https://www.w3.org/)
+
+#### Tutorial recomendado
+- Aprende HTML y CSS con el tutorial oficial de W3C: [https://www.w3.org/Style/Examples/007/firstcss.es.html](https://www.w3.org/Style/Examples/007/firstcss.es.html)
+
+### Codificando:Instrucciones de la actividad: Juego Snake
+
+1. **Abre la inteligencia artificial de tu preferencia** (por ejemplo, ChatGPT, Claude o Gemini) e inicia sesión con tus credenciales.
+2. **Introduce el siguiente prompt** en la IA:
+
+> Quiero que actúes como un desarrollador experto en juegos para web. Por favor, genera el código completo de una versión simple del clásico juego Snake (el juego de la serpiente de los celulares Nokia) que funcione totalmente en cualquier navegador moderno.
+>
+> Requisitos del juego Snake:
+> - Utiliza únicamente HTML, CSS y JavaScript puro (sin frameworks).
+> - Todo debe estar en un solo archivo .html listo para ejecutarse.
+> - Debe mostrar el área de juego y la puntuación actual.
+> - El usuario controla la serpiente con las teclas de flechas.
+> - La serpiente crece cuando come la "comida" (un cuadrado de color distinto).
+> - Si la serpiente choca contra sí misma o los bordes, el juego termina y muestra el puntaje alcanzado con la opción de reiniciar.
+> - El diseño puede ser sencillo pero debe ser jugable y comprensible.
+> - El código debe estar bien comentado para que sea fácil de entender.
+>
+> No incluyas descripciones adicionales, solo entrega el código listo para copiar-pegar y jugar.
+3. **Espera** a que la IA generativa termine de codificar el juego Snake.
+4. **Abre tu editor de texto** (puede ser Notepad, Bloc de notas o cualquier editor disponible en tu sistema operativo).
+5. **Crea un archivo llamado** `SNAKE.html`. Copia y pega el código generado por la IA dentro de este archivo.
+6. **Guarda el archivo** y haz doble clic sobre él para abrirlo en tu navegador predeterminado.
+7. ¡**Comienza a jugar** y experimenta cómo funciona el clásico juego Snake directamente en tu navegador!
+
+>Si tu archivo no funciona o tienes dificultades para generar el juego, aquí te dejo el archivo listo para que lo descargues y juegues Snake en tu navegador. [aquí](/snake.html)
+---
+
+
+## Mensaje para los estudiantes
+
+El código que aquí encuentran no está hecho solo para **copiar y pegar**, sino para **entender, modificar y experimentar**. Cada línea fue escrita con la intención de que la analicen, la rompan, la reconstruyan y descubran **por qué funciona**.
+Recuerden que **la verdadera programación no está en memorizar**, sino en **pensar, probar y aprender de los errores**.
+
+Vivimos una época increíble: la **Inteligencia Artificial** puede ayudarnos a aprender más rápido, pero **no debe sustituir el aprendizaje**. Usarla con responsabilidad significa dejar que nos **guíe**, no que haga todo por nosotros.
+Cuando solo copiamos y pegamos sin comprender, **entregamos tareas, pero no adquirimos conocimiento**.
+
+ **Atrévete a experimentar, a equivocarte y a crear tus propias versiones del código.**
+Cada modificación que hagas te acerca un paso más a convertirte en un verdadero profesional de los sistemas computacionales.
+
+> “El mejor código no es el que copias, sino el que entiendes, mejoras y haces tuyo.”
+
+---
+
+
+
+## Tecnologías — Badges (Carrera de Sistemas Computacionales)
+
 
 Este README agrupa badges (shields.io) para las tecnologías más comunes en la carrera de **Sistemas Computacionales**.
 Puedes quitar o cambiar cualquiera. Los badges usan Shields.io y enlazan a las webs oficiales.

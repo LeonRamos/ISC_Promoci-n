@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Snake Clásico - Juego en JS</title>
+  <style>
+    body {
+      background: #222;
+      color: #f3f3f3;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      height: 100vh;
+      justify-content: center;
+    }
+    h1 {
+      margin-bottom: 10px;
+    }
+    #score {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+    }
+    #gameArea {
+      background: #303841;
+      box-shadow: 0 0 8px #111;
+      position: relative;
+      margin-bottom: 10px;
+      display: block;
+    }
+    #gameOver {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(30,30,30,0.95);
+      color: #fff;
+      padding: 35px 30px 25px 30px;
+      text-align: center;
+      border-radius: 16px;
+      z-index: 10;
+      font-size: 1.2em;
+    }
+    #restart {
+      margin-top: 12px;
+      font-size: 1em;
+      padding: 6px 16px;
+      border: none;
+      border-radius: 6px;
+      background: #00adb5;
+      color: #222;
+      cursor: pointer;
+    }
+    #restart:hover {
+      background: #019196;
+    }
+  </style>
+</head>
+<body>
+  <h1>Snake Clásico</h1>
+  <div id="score">Puntuación: <span id="points">0</span></div>
+  <div style="position:relative;">
+    <canvas id="gameArea" width="400" height="400"></canvas>
+    <div id="gameOver">
+      <div id="finalScore"></div>
+      <button id="restart">Reiniciar</button>
+    </div>
+  </div>
+  <script>
+    // --- Configuración inicial del juego ---
+    const canvas = document.getElementById('gameArea');
+    const ctx = canvas.getContext('2d');
+    const box = 20; // Tamaño de cada cuadrado (20x20 px)
+    const canvasSize = 400; // Área de juego 400x400 px
+    let direction = 'RIGHT';
+    let snake, food, score, running;
+
+    // Inicializa el juego
+    function startGame() {
+      snake = [
+        { x: 8 * box, y: 10 * box }, // Cabeza inicial
+        { x: 7 * box, y: 10 * box }
+      ];
+      direction = 'RIGHT';
+      placeFood();
+      score = 0;
+      running = true;
+      document.getElementById('points').textContent = score;
+      document.getElementById('gameOver').style.display = 'none';
+    }
+
+    // Coloca la comida en una posición aleatoria
+    function placeFood() {
+      food = {
+        x: Math.floor(Math.random() * (canvas.width / box)) * box,
+        y: Math.floor(Math.random() * (canvas.height / box)) * box
+      };
+      // Evita que la comida aparezca dentro de la serpiente
+      while (snake && snake.some(segment => segment.x === food.x && segment.y === food.y)) {
+        food.x = Math.floor(Math.random() * (canvas.width / box)) * box;
+        food.y = Math.floor(Math.random() * (canvas.height / box)) * box;
+      }
+    }
+
+    // Dibuja todo
+    function draw() {
+      // Fondo
+      ctx.fillStyle = '#303841';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      // Dibuja la serpiente
+      for (let i = 0; i < snake.length; i++) {
+        ctx.fillStyle = (i === 0) ? "#00aad2" : "#00ffd0";
+        ctx.fillRect(snake[i].x, snake[i].y, box, box);
+        ctx.strokeStyle = "#1d1e22";
+        ctx.strokeRect(snake[i].x, snake[i].y, box, box);
+      }
+      // Dibuja la comida
+      ctx.fillStyle = "#ff5151";
+      ctx.fillRect(food.x, food.y, box, box);
+      ctx.strokeStyle = "#962727";
+      ctx.strokeRect(food.x, food.y, box, box);
+    }
+
+    // Control del teclado para la dirección
+    document.addEventListener('keydown', (e) => {
+      if (!running) return;
+      if (e.key === 'ArrowLeft' && direction !== 'RIGHT') direction = 'LEFT';
+      else if (e.key === 'ArrowUp' && direction !== 'DOWN') direction = 'UP';
+      else if (e.key === 'ArrowRight' && direction !== 'LEFT') direction = 'RIGHT';
+      else if (e.key === 'ArrowDown' && direction !== 'UP') direction = 'DOWN';
+    });
+
+    // Lógica principal del juego
+    function gameLoop() {
+      if (!running) return;
+
+      // Nueva cabeza basada en la dirección
+      let head = { x: snake[0].x, y: snake[0].y };
+      if (direction === 'LEFT') head.x -= box;
+      if (direction === 'UP') head.y -= box;
+      if (direction === 'RIGHT') head.x += box;
+      if (direction === 'DOWN') head.y += box;
+
+      // Detecta colisión con muro
+      if (
+        head.x < 0 || head.x >= canvas.width ||
+        head.y < 0 || head.y >= canvas.height
+      ) {
+        endGame();
+        return;
+      }
+
+      // Detecta colisión con sí misma
+      for (let segment of snake) {
+        if (head.x === segment.x && head.y === segment.y) {
+          endGame();
+          return;
+        }
+      }
+
+      // Verifica si come la comida
+      if (head.x === food.x && head.y === food.y) {
+        snake.unshift(head); // Crece la serpiente
+        score += 1;
+        document.getElementById('points').textContent = score;
+        placeFood();
+      } else {
+        snake.unshift(head);
+        snake.pop(); // Mantiene longitud
+      }
+
+      draw();
+    }
+
+    // Muestra pantalla de GAME OVER
+    function endGame() {
+      running = false;
+      document.getElementById('finalScore').innerHTML =
+        `<b>¡Juego terminado!</b><br>Puntaje final: <b>${score}</b>`;
+      document.getElementById('gameOver').style.display = 'block';
+    }
+
+    // Reinicia el juego si se presiona el botón
+    document.getElementById('restart').onclick = function() {
+      startGame();
+      draw();
+      loopInterval = setInterval(gameLoop, 100);
+    };
+
+    // Iniciar el juego
+    startGame();
+    draw();
+    let loopInterval = setInterval(gameLoop, 100); // 100 ms por cuadro (~10 FPS)
+
+    // Si se pierde, detiene el intervalo
+    function stopLoop() {
+      clearInterval(loopInterval);
+    }
+    // Vigila el estado para frenar el loop correctamente
+    setInterval(() => {
+      if (!running) stopLoop();
+    }, 50);
+
+    // Comentario final: Este código implementa el clásico Snake.
+    // Incluye comentarios para fácil lectura y modificación.
+  </script>
+</body>
+</html>
