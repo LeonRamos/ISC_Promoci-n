@@ -247,10 +247,5 @@ Puedes quitar o cambiar cualquiera. Los badges usan Shields.io y enlazan a las w
 - Para cambiar el color: reemplaza el valor hexadecimal tras el `-` (por ejemplo `-FF5733`).
 - Para ocultar el enlace, elimina la parte `(https://...)` que envuelve la imagen.
 
----
 
-> Si quieres, te devuelvo:
-> - una versión reducida con sólo las tecnologías más usadas,
-> - o un `README.md` traducido a inglés,
-> - o que incluya versiones (vX.Y.Z) dinámicas que muestren la versión real (si me das las versiones).
 
